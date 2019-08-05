@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML fundamentals</title>
+        <style>
+            table {
+                width:100%;
+            }
+
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            th, td {
+                padding: 15px;
+                text-align: left;
+            }
+
+            table#t01 tr:nth-child(even) {
+                background-color: #eee;
+            }
+
+            table#t01 tr:nth-child(odd) {
+                background-color: #fff;
+            }
+
+            table#t01 th {
+                background-color: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>Monthly savings</caption>
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th> 
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>80</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML fundamentals</title>
+    </head>
+    <body>
+        <form action="action.php" method="post">
+          <input type="text" name="firstName" placeholder="First Name">
+          <input type="text" name="lastName" value="Your Last Name">
+          <input type="password" name="password" placeholder="Enter password">
+          <br>
+          <input type="radio" name="answer" value="yes" checked> Yes
+          <input type="radio" name="answer" value="no"> No
+          <input type="radio" name="answer" value="na"> N/A
+          <br>
+          <select name="cars">
+            <option value="peugeot">Peugeot</option>
+            <option value="chevrolet">Chevrolet</option>
+            <option value="ford">Ford</option>
+            <option value="volkswagen">Volkswagen</option>
+          </select>
+          <br>
+          <textarea name="comments" cols="50" rows="10"></textarea>
+          <br>
+          <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+          <input type="checkbox" name="vehicle2" value="Car"> I have a car 
+          <br>
+          <button type="submit">Send</button>
+          <button type="reset">Reset</button>
+          <button type="button" onclick="alert('Hello World!')">Say Hello</button>
+        </form>
+    </body>
+</html>
