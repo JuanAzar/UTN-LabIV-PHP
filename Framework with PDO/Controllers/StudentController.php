@@ -1,16 +1,16 @@
 <?php
     namespace Controllers;
 
-    use Repositories\StudentRepository as StudentRepository;
+    use DAO\StudentDAO as StudentDAO;
     use Models\Student as Student;
 
     class StudentController
     {
-        private $studentRepository;
+        private $studentDAO;
 
         public function __construct()
         {
-            $this->studentRepository = new StudentRepository();
+            $this->studentDAO = new StudentDAO();
         }
 
         public function ShowAddView()
@@ -20,7 +20,7 @@
 
         public function ShowListView()
         {
-            $studentList = $this->studentRepository->GetAll();
+            $studentList = $this->studentDAO->GetAll();
 
             require_once(VIEWS_PATH."student-list.php");
         }
@@ -32,7 +32,7 @@
             $student->setfirstName($firstName);
             $student->setLastName($lastName);
 
-            $this->studentRepository->Add($student);
+            $this->studentDAO->Add($student);
 
             $this->ShowAddView();
         }
