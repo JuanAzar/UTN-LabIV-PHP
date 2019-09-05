@@ -13,6 +13,11 @@
             $this->imageDAO = new ImageDAO();
         }
 
+        public function ShowUploadView()
+        {
+            require_once(VIEWS_PATH."index.php");
+        }
+
         public function ShowListView($message = "")
         {
             $imageList = $this->imageDAO->GetAll();
