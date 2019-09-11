@@ -3,7 +3,6 @@
 
     use Repositories\StudentRepository as StudentRepository;
     use Models\Student as Student;
-    use Data\Cast as Cast;
 
     if($_POST)
     {
