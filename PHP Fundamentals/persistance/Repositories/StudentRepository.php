@@ -5,8 +5,14 @@
     use Models\Student as Student;
 
     class StudentRepository implements IStudentRepository
-    {
+    {        
         private $studentList = array();
+        private $fileName;
+
+        public function __construct()
+        {
+            $this->fileName = dirname(__DIR__)."/Data/students.json";
+        }
 
         public function Add(Student $student)
         {
@@ -39,16 +45,16 @@
 
             $jsonContent = json_encode($arrayToEncode, JSON_PRETTY_PRINT);
             
-            file_put_contents('Data/students.json', $jsonContent);
+            file_put_contents($this->fileName, $jsonContent);
         }
 
         private function RetrieveData()
         {
             $this->studentList = array();
 
-            if(file_exists('Data/students.json'))
+            if(file_exists($this->fileName))
             {
-                $jsonContent = file_get_contents('Data/students.json');
+                $jsonContent = file_get_contents($this->fileName);
 
                 $arrayToDecode = ($jsonContent) ? json_decode($jsonContent, true) : array();
 
