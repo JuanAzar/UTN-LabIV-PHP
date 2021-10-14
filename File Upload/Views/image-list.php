@@ -38,7 +38,7 @@
                     <div class="form-group text-white">
                          <input type="file" name="image" value="" class="form-control-file ml-3">
                     </div>
-                    <button type="submit" name="button" class="btn btn-danger ml-3">Subir</button>
+                    <button type="submit" class="btn btn-danger ml-3">Subir</button>
                </form>
                <span><?php if(isset($message)) { echo $message; } ?></span>
           </div>
